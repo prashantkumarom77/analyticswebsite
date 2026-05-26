@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Why adjusting historical cash market data is critical for accurate backtests without artificial price drop artifacts.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Handling Corporate Actions in Equities — LLUBRAEB Analytics</title>
+    
+    <link rel="icon" type="image/png" href="img/core-img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/custom-override.css">
+</head>
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    
+    <header class="ve-header" id="ve-sticky">
+        <div class="container-fluid ve-nav-wrap">
+            <div class="ve-logo">
+                <a href="index.html" style="display: flex; align-items: center;">
+                    <img src="img/core-img/logo.png" alt="LLUBRAEB Analytics Logo" style="height: 48px; width: auto;">
+                </a>
+            </div>
+            <nav class="ve-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Asset Coverage</a></li>
+                    <li><a href="index.html#use-cases">Use Cases</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="ve-nav-cta"><a href="contact.html" class="ve-cta-btn">Get API Access <i class="fa fa-arrow-right"></i></a></div>
+            <button class="ve-toggler" id="ve-toggle"><span></span><span></span><span></span></button>
+        </div>
+        <div class="ve-mobile-menu" id="ve-mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Asset Coverage</a></li>
+                <li><a href="index.html#use-cases">Use Cases</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="ve-page-hero ve-page-hero-sm" style="background-image:url(img/bg-img/10.jpg);">
+        <div class="ve-page-hero-overlay"></div>
+        <div class="container ve-page-hero-content">
+            <span class="ve-insight-cat" style="margin-bottom:16px;">Backtesting</span>
+            <h1>Handling Corporate Actions in <span>Long-Term Equities</span></h1>
+            <div class="ve-post-meta-hero">
+                <span><i class="fa fa-calendar"></i> Oct 12, 2025</span>
+                <span><i class="fa fa-user"></i> Data Engineering Team</span>
+                <span><i class="fa fa-clock-o"></i> 6 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="ve-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <article class="ve-article">
+                        <div class="ve-article-featured bg-img" style="background-image:url(img/bg-img/10.jpg);"></div>
+                        <div class="ve-article-body">
+                            <p class="ve-article-lead">When building quantitative models on historical cash market data, one of the most common pitfalls developers face is the failure to properly account for corporate actions. Unadjusted data introduces artificial price drops that can trigger false stop-losses and ruin backtest integrity.</p>
+                            
+                            <h3>1. The Danger of Unadjusted Data</h3>
+                            <p>Consider a 2:1 stock split. If a stock closes at ₹1,000 on Monday and opens at ₹500 on Tuesday post-split, an unadjusted dataset records a massive 50% loss. An algorithmic momentum strategy reading this raw data will instantly execute a sell order, misinterpreting a routine corporate action as a catastrophic market event.</p>
+                            
+                            <h3>2. Normalizing for Splits and Bonuses</h3>
+                            <p>To maintain a continuous, accurate price history, historical prices prior to the ex-date must be mathematically adjusted. At LLUBRAEB Analytics, our historical databases automatically apply an adjustment factor to all Open, High, Low, and Close (OHLC) prices, ensuring smooth data continuity for long-term moving averages and oscillators.</p>
+                            
+                            <blockquote class="ve-blockquote">
+                                <p>"A strategy is only as robust as the data it was trained on. Garbage in, execution errors out."</p>
+                                <cite>— Lead Quant, LLUBRAEB</cite>
+                            </blockquote>
+                            
+                            <h3>3. The Complexity of Dividends</h3>
+                            <p>While splits are straightforward, dividends require a choice. Regular cash dividends are often ignored in standard price adjustments unless they are unusually large (special dividends). However, for Total Return strategies, we provide specialized endpoints that factor in dividend reinvestment, painting a true picture of total yield over a 10-year span.</p>
+                            
+                            <h3>4. Open Interest (OI) and Derivatives</h3>
+                            <p>Corporate actions don't just affect cash markets; they shift option strike prices and lot sizes overnight. When backtesting F&O data spanning a corporate action, our datasets seamlessly link the pre-action strikes to their post-action adjusted equivalents, allowing for uninterrupted Greek calculations.</p>
+                            
+                            <h3>5. Why Pure Data Matters</h3>
+                            <p>Scrubbing this data internally requires massive engineering overhead. By utilizing an institutional-grade API that delivers pre-adjusted, pristine historical dumps, your engineering team can spend their time optimizing execution algorithms rather than cleaning erroneous ticks.</p>
+                            
+                            <div class="ve-article-tags">
+                                <strong>Tags:</strong>
+                                <a href="#">Backtesting</a>
+                                <a href="#">Equities</a>
+                                <a href="#">Data Engineering</a>
+                                <a href="#">Python</a>
+                            </div>
+                            
+                            <div class="ve-article-share">
+                                <strong>Share:</strong>
+                                <a href="https://www.linkedin.com/company/llubraeb-academy/"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <div class="ve-comments-section">
+                        <h4>3 Comments</h4>
+                        <div class="ve-comment">
+                            <div class="ve-comment-body">
+                                <div class="ve-comment-meta"><strong>Rahul M.</strong><span>Oct 13, 2025</span></div>
+                                <p>Great breakdown. We spent three months building an internal corporate action scrubber before switching to your adjusted API. Saved us a massive headache.</p>
+                            </div>
+                        </div>
+                        <div class="ve-comment ve-comment-reply">
+                            <div class="ve-comment-body">
+                                <div class="ve-comment-meta"><strong>LLUBRAEB Data Team</strong><span>Oct 13, 2025</span></div>
+                                <p>Thanks Rahul! We know exactly how painful that scrubbing process is. Glad the API is working smoothly for your team.</p>
+                            </div>
+                        </div>
+                        <div class="ve-comment">
+                            <div class="ve-comment-body">
+                                <div class="ve-comment-meta"><strong>Anjali D.</strong><span>Oct 15, 2025</span></div>
+                                <p>Does your historical data endpoint allow toggling between raw OHLC and adjusted OHLC? Sometimes our models need to see the raw tape.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ve-comment-form-wrap">
+                        <h4>Leave a Comment</h4>
+                        <form class="ve-contact-form" action="javascript:void(0);" onsubmit="alert('Thank you! Your comment has been submitted for review.'); return false;">
+                            <div class="ve-form-row">
+                                <div class="ve-form-group"><label>Name</label><input type="text" placeholder="Your name" required></div>
+                                <div class="ve-form-group"><label>Email</label><input type="email" placeholder="Your email" required></div>
+                            </div>
+                            <div class="ve-form-group">
+                                <label>Comment</label>
+                                <textarea rows="5" placeholder="Share your technical thoughts..."></textarea>
+                            </div>
+                            <button type="submit" class="ve-btn-primary">Post Comment <i class="fa fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="ve-sidebar">
+                        <div class="ve-sidebar-widget">
+                            <h5 class="ve-sidebar-title">Search Docs</h5>
+                            <div class="ve-search-box">
+                                <input type="text" placeholder="Search keywords...">
+                                <button><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="ve-sidebar-widget">
+                            <h5 class="ve-sidebar-title">Categories</h5>
+                            <ul class="ve-cat-list">
+                                <li><a href="#">Data Engineering <span>12</span></a></li>
+                                <li><a href="#">Quantitative Research <span>8</span></a></li>
+                                <li><a href="#">API Updates <span>6</span></a></li>
+                                <li><a href="#">Backtesting <span>9</span></a></li>
+                                <li><a href="#">Market Microstructure <span>15</span></a></li>
+                                <li><a href="#">Trading Algorithms <span>11</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="ve-sidebar-widget">
+                            <h5 class="ve-sidebar-title">Recent Posts</h5>
+                            <div class="ve-recent-post">
+                                <div class="ve-rp-img bg-img" style="background-image:url(img/bg-img/11.jpg);"></div>
+                                <div><a href="single-post.html">Calculating Real-Time Greeks via WebSockets</a><span><i class="fa fa-calendar"></i> Oct 05</span></div>
+                            </div>
+                            <div class="ve-recent-post">
+                                <div class="ve-rp-img bg-img" style="background-image:url(img/bg-img/12.jpg);"></div>
+                                <div><a href="single-post.html">Continuous Contracts in MCX</a><span><i class="fa fa-calendar"></i> Sep 28</span></div>
+                            </div>
+                            <div class="ve-recent-post">
+                                <div class="ve-rp-img bg-img" style="background-image:url(img/bg-img/23.jpg);"></div>
+                                <div><a href="single-post.html">Sub-10ms Latency: Optimizing Infrastructure</a><span><i class="fa fa-calendar"></i> Sep 15</span></div>
+                            </div>
+                        </div>
+                        <div class="ve-sidebar-widget">
+                            <h5 class="ve-sidebar-title">Popular Tags</h5>
+                            <div class="ve-tags">
+                                <a href="#">Backtesting</a><a href="#">Python</a><a href="#">WebSockets</a>
+                                <a href="#">REST API</a><a href="#">Tick Data</a><a href="#">Options Greeks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ve-newsletter-section">
+        <div class="container">
+            <div class="ve-newsletter-wrap">
+                <div class="ve-nl-left">
+                    <i class="fa fa-code"></i>
+                    <div>
+                        <h3>Get API &amp; Infrastructure Updates</h3>
+                        <p>Receive technical documentation updates and new endpoint releases directly to your inbox.</p>
+                    </div>
+                </div>
+                <div class="ve-nl-right">
+                    <form class="ve-nl-form" action="javascript:void(0);" onsubmit="alert('Thank you! You are now subscribed to API updates.'); return false;">
+                        <input type="email" placeholder="Enter your developer email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ve-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4 mb-50">
+                    <div class="ve-footer-brand">
+                        <a href="index.html" class="ve-footer-logo" style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="img/core-img/logo.png" alt="LLUBRAEB Analytics Logo" style="height: 48px; width: auto;">
+                        </a>
+                        <p>Precision Data for the Quantitative Edge. Empowering strategies with flawless Indian market data.</p>
+                        <div class="ve-social"><a href="https://www.linkedin.com/company/llubraeb-academy/"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-50">
+                    <h5 class="ve-footer-title">Quick Links</h5>
+                    <ul class="ve-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#coverage">Asset Coverage</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-50">
+                    <h5 class="ve-footer-title">Our Capabilities</h5>
+                    <ul class="ve-footer-links">
+                        <li><a href="services.html">NSE F&O Intelligence</a></li>
+                        <li><a href="services.html">Adjusted Cash Markets</a></li>
+                        <li><a href="services.html">MCX Continuous Contracts</a></li>
+                        <li><a href="services.html">Index Tick Data</a></li>
+                        <li><a href="services.html">REST & WebSocket APIs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-50">
+                    <h5 class="ve-footer-title">Get In Touch</h5>
+                    <ul class="ve-footer-contact">
+                        <li><i class="fa fa-map-marker"></i> P.NO. 101 & 102, 103 OFFICER'S CLY R.K., HYDERABAD, Telangana, 500001</li>
+                        <li><i class="fa fa-phone"></i> +91 91213 84625</li>
+                        <li><i class="fa fa-envelope"></i> contact@llubraebacademy.co.in</li>
+                        <li><i class="fa fa-clock-o"></i> Mon–Fri, 9am – 6pm IST</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ve-footer-bottom">
+            <div class="container">
+                <div class="ve-footer-bottom-inner">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> LLUBRAEB Analytics. All Rights Reserved.</p>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookie.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script src="js/vaultedge.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="LLUBRAEB Analytics UI Elements — design system components, forms, accordions, and more.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UI Elements — LLUBRAEB Analytics</title>
+    
+    <link rel="icon" type="image/png" href="img/core-img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/custom-override.css">
+</head>
+<body>
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    
+    <header class="ve-header" id="ve-sticky">
+        <div class="container-fluid ve-nav-wrap">
+            <div class="ve-logo">
+                <a href="index.html" style="display: flex; align-items: center;">
+                    <img src="img/core-img/logo.png" alt="LLUBRAEB Analytics Logo" style="height: 48px; width: auto;">
+                </a>
+            </div>
+            <nav class="ve-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Asset Coverage</a></li>
+                    <li><a href="index.html#use-cases">Use Cases</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="ve-nav-cta"><a href="contact.html" class="ve-cta-btn">Get API Access <i class="fa fa-arrow-right"></i></a></div>
+            <button class="ve-toggler" id="ve-toggle"><span></span><span></span><span></span></button>
+        </div>
+        <div class="ve-mobile-menu" id="ve-mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Asset Coverage</a></li>
+                <li><a href="index.html#use-cases">Use Cases</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="ve-page-hero" style="background-image:url(img/bg-img/13.jpg);">
+        <div class="ve-page-hero-overlay"></div>
+        <div class="container ve-page-hero-content">
+            <span class="ve-section-tag">Design System</span>
+            <h1>UI <span>Elements &amp; Components</span></h1>
+            <nav aria-label="breadcrumb">
+                <ol class="ve-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">UI Elements</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="ve-section ve-elements-section">
+        <div class="container">
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>01</span> Buttons</h3>
+                <div class="ve-el-demo">
+                    <a href="#" class="ve-btn-primary">Explore Data</a>
+                    <a href="#" class="ve-btn-ghost">View API Docs</a>
+                    <a href="#" class="ve-btn-white" style="background:var(--ve-dark);color:#fff;">Dark Button</a>
+                    <a href="#" class="ve-btn-primary" style="background:transparent;border:2px solid var(--ve-gold);color:var(--ve-gold);">Outline Gold</a>
+                    <a href="#" class="ve-cta-btn">Get API Access <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>02</span> Data Coverage Cards</h3>
+                <div class="ve-services-grid">
+                    <div class="ve-service-card">
+                        <div class="ve-service-icon"><i class="fa fa-database"></i></div>
+                        <h4>NSE F&O Intelligence</h4>
+                        <p>Access real-time derivatives data with tick-by-tick options Greeks and Open Interest analysis.</p>
+                    </div>
+                    <div class="ve-service-card">
+                        <div class="ve-service-icon"><i class="fa fa-line-chart"></i></div>
+                        <h4>Adjusted Cash Markets</h4>
+                        <p>Long-term equity backtests running flawlessly on corporate-action adjusted historical datasets.</p>
+                    </div>
+                    <div class="ve-service-card">
+                        <div class="ve-service-icon"><i class="fa fa-refresh"></i></div>
+                        <h4>MCX Continuous Contracts</h4>
+                        <p>Perfectly stitched continuous contracts for commodities, optimized for backtesting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>03</span> Accordion / FAQ</h3>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="ve-faq-list">
+                            <div class="ve-faq-item open">
+                                <div class="ve-faq-q"><span>Do you provide tick-level historical data?</span><i class="fa fa-plus"></i></div>
+                                <div class="ve-faq-a">Yes. Our historical archives include granular tick-by-tick data, allowing for precise slippage modeling and high-frequency backtesting.</div>
+                            </div>
+                            <div class="ve-faq-item">
+                                <div class="ve-faq-q"><span>Are datasets adjusted for corporate actions?</span><i class="fa fa-plus"></i></div>
+                                <div class="ve-faq-a">Absolutely. All historical equity data is meticulously adjusted for corporate actions, including splits, bonuses, and dividends.</div>
+                            </div>
+                            <div class="ve-faq-item">
+                                <div class="ve-faq-q"><span>Can I execute trades directly through your API?</span><i class="fa fa-plus"></i></div>
+                                <div class="ve-faq-a">No. LLUBRAEB Analytics is strictly a data vendor. We provide the intelligence; you use your own connected brokerage to actually execute the trades.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="ve-faq-list">
+                            <div class="ve-faq-item">
+                                <div class="ve-faq-q"><span>Can my team test the data before purchasing?</span><i class="fa fa-plus"></i></div>
+                                <div class="ve-faq-a">Yes. We provide sample datasets so your developers and quants can evaluate our data structure and cleanliness before making a commitment.</div>
+                            </div>
+                            <div class="ve-faq-item">
+                                <div class="ve-faq-q"><span>How do I access the live market feeds?</span><i class="fa fa-plus"></i></div>
+                                <div class="ve-faq-a">You can connect via our robust REST APIs and WebSockets to receive normalized, clean, and structured feeds ready for immediate modeling.</div>
+                            </div>
+                            <div class="ve-faq-item">
+                                <div class="ve-faq-q"><span>Do you offer enterprise infrastructure setups?</span><i class="fa fa-plus"></i></div>
+                                <div class="ve-faq-a">Yes, we offer custom licensing, dedicated support, and bespoke feed configurations specifically designed for institutional desks.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>04</span> Testimonial Cards</h3>
+                <div class="ve-testi-grid">
+                    <div class="ve-testi-card">
+                        <div class="ve-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"LLUBRAEB's perfectly stitched MCX continuous contracts completely eliminated the rolling errors we used to face. We appreciate their pure-data approach."</p>
+                        <div class="ve-testi-author">
+                            <div><strong>Rahul M.</strong><span>Principal Quant</span></div>
+                        </div>
+                    </div>
+                    <div class="ve-testi-card">
+                        <div class="ve-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"Integrating LLUBRAEB’s WebSocket feeds into our proprietary system took a fraction of the time we budgeted. The options Greeks are spot-on."</p>
+                        <div class="ve-testi-author">
+                            <div><strong>Vikram S.</strong><span>CTO</span></div>
+                        </div>
+                    </div>
+                    <div class="ve-testi-card">
+                        <div class="ve-testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"We spent months scrubbing historical F&O datasets before finding LLUBRAEB. Their clean archives and robust APIs saved our team countless hours."</p>
+                        <div class="ve-testi-author">
+                            <div><strong>Anjali D.</strong><span>Lead Data Scientist</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>05</span> Counter Stats</h3>
+                <section class="ve-counter-section" style="border-radius:var(--ve-radius);overflow:hidden;">
+                    <div class="container">
+                        <div class="ve-counter-grid">
+                            <div class="ve-counter-item"><i class="fa fa-server"></i><strong class="counter" data-count="99">0</strong><span>.99%</span><p>Uptime SLA</p></div>
+                            <div class="ve-counter-item"><i class="fa fa-bolt"></i><span>&lt;</span><strong class="counter" data-count="10">0</strong><span>ms</span><p>Ultra-Low Latency</p></div>
+                            <div class="ve-counter-item"><i class="fa fa-history"></i><strong class="counter" data-count="6">0</strong><span>+</span><p>Years of History</p></div>
+                            <div class="ve-counter-item"><i class="fa fa-bullseye"></i><strong class="counter" data-count="100">0</strong><span>%</span><p>Data Vendor Focus</p></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>06</span> Contact Form</h3>
+                <div class="ve-contact-form-wrap" style="max-width:700px;">
+                    <form class="ve-contact-form" action="javascript:void(0);" onsubmit="alert('Thank you! Your request has been received.'); return false;">
+                        <div class="ve-form-row">
+                            <div class="ve-form-group"><label>Full Name</label><input type="text" placeholder="Your full name" required></div>
+                            <div class="ve-form-group"><label>Business Email</label><input type="email" placeholder="Your work email" required></div>
+                        </div>
+                        <div class="ve-form-row">
+                            <div class="ve-form-group"><label>Phone Number</label><input type="tel" placeholder="Your phone number"></div>
+                            <div class="ve-form-group"><label>Data Requirement</label>
+                                <select required>
+                                    <option value="">Select a service</option>
+                                    <option>Historical Data Dumps</option>
+                                    <option>Live API / WebSocket Feeds</option>
+                                    <option>Request a Free Sample</option>
+                                    <option>Enterprise Infrastructure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ve-form-group"><label>Message</label><textarea rows="4" placeholder="Tell us about your data integration needs..."></textarea></div>
+                        <button type="submit" class="ve-btn-primary">Send Request <i class="fa fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>07</span> Data Sample Banner</h3>
+                <section class="ve-newsletter-section">
+                    <div class="container">
+                        <div class="ve-newsletter-wrap">
+                            <div class="ve-nl-left">
+                                <i class="fa fa-database"></i>
+                                <div>
+                                    <h3>Test Our Data Capabilities</h3>
+                                    <p>Request sample datasets to evaluate our structure and formatting.</p>
+                                </div>
+                            </div>
+                            <div class="ve-nl-right">
+                                <form class="ve-nl-form" action="javascript:void(0);" onsubmit="alert('Thank you for requesting a sample. Check your email shortly.'); return false;">
+                                    <input type="email" placeholder="Enter your business email" required>
+                                    <button type="submit">Request Sample</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="ve-el-block">
+                <h3 class="ve-el-title"><span>08</span> Integration Process Steps</h3>
+                <div class="ve-process-grid">
+                    <div class="ve-process-step">
+                        <div class="ve-process-num">01</div>
+                        <h5>Request Sample</h5>
+                        <p>Get access to historical data dumps for an initial quality and format evaluation.</p>
+                    </div>
+                    <div class="ve-process-arrow"><i class="fa fa-long-arrow-right"></i></div>
+                    <div class="ve-process-step">
+                        <div class="ve-process-num">02</div>
+                        <h5>Evaluate Data</h5>
+                        <p>Pressure-test our pristine data against your quantitative models and strategies.</p>
+                    </div>
+                    <div class="ve-process-arrow"><i class="fa fa-long-arrow-right"></i></div>
+                    <div class="ve-process-step">
+                        <div class="ve-process-num">03</div>
+                        <h5>API Integration</h5>
+                        <p>Connect to our robust REST APIs and WebSocket feeds using our detailed documentation.</p>
+                    </div>
+                    <div class="ve-process-arrow"><i class="fa fa-long-arrow-right"></i></div>
+                    <div class="ve-process-step">
+                        <div class="ve-process-num">04</div>
+                        <h5>Go Live</h5>
+                        <p>Power your analysis engine with ultra-low latency, institutional-grade market feeds.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="ve-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4 mb-50">
+                    <div class="ve-footer-brand">
+                        <a href="index.html" class="ve-footer-logo" style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="img/core-img/logo.png" alt="LLUBRAEB Analytics Logo" style="height: 48px; width: auto;">
+                        </a>
+                        <p>Precision Data for the Quantitative Edge. Empowering strategies with flawless Indian market data.</p>
+                        <div class="ve-social">
+                            <a href="https://www.linkedin.com/company/llubraeb-academy/"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-50">
+                    <h5 class="ve-footer-title">Quick Links</h5>
+                    <ul class="ve-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#coverage">Asset Coverage</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-50">
+                    <h5 class="ve-footer-title">Our Capabilities</h5>
+                    <ul class="ve-footer-links">
+                        <li><a href="services.html">NSE F&O Intelligence</a></li>
+                        <li><a href="services.html">Adjusted Cash Markets</a></li>
+                        <li><a href="services.html">MCX Continuous Contracts</a></li>
+                        <li><a href="services.html">Index Tick Data</a></li>
+                        <li><a href="services.html">REST & WebSocket APIs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-50">
+                    <h5 class="ve-footer-title">Get In Touch</h5>
+                    <ul class="ve-footer-contact">
+                        <li><i class="fa fa-map-marker"></i> P.NO. 101 & 102, 103 OFFICER'S CLY R.K., HYDERABAD, Telangana, 500001</li>
+                        <li><i class="fa fa-phone"></i> +91 91213 84625</li>
+                        <li><i class="fa fa-envelope"></i> contact@llubraebacademy.co.in</li>
+                        <li><i class="fa fa-clock-o"></i> Mon–Fri, 9am – 6pm IST</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ve-footer-bottom">
+            <div class="container">
+                <div class="ve-footer-bottom-inner">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> LLUBRAEB Analytics. All Rights Reserved.</p>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="cookie.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script src="js/vaultedge.js"></script>
+</body>
+</html>
